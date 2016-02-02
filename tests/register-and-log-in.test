@@ -7,7 +7,7 @@
         id_username: testuser
         id_email: testuser@domain.com
         id_password1: password
-        id_password2: password
+        id_password2: password2
     - Click: sign-up-button
     - Wait for email:
         containing: Please Confirm Your E-mail Address

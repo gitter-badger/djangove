@@ -11,8 +11,14 @@ python:
 - "3.5"
 
 install:
+  - "pip install flake8"
+  - "pip install isort"
   - "pip install hitch"
   - "cd tests"
   - "hitch init"
 script:
+  - "cd .."
+  - "isort -c -rc -df"
+  - "flake8"
+  - "cd tests"
   - "hitch test . --extra '{\"xvfb\":true, \"pause_on_failure\":false}'"
